@@ -1,4 +1,4 @@
-package cfm.SoisotaService.dto;
+package cfm.SMSEmailService.dto;
 
 import lombok.Data;
 

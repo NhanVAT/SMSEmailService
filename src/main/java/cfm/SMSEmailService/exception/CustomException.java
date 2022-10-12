@@ -1,4 +1,4 @@
-package cfm.SoisotaService.exception;
+package cfm.SMSEmailService.exception;
 
 import org.springframework.http.HttpStatus;
 

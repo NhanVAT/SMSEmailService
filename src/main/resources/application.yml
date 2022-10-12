@@ -1,0 +1,74 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
+  jmx:
+    default-domain: SMSService
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mariadb://localhost:3307/s_smsemail?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: cmis1234
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+  jpa:
+   # hibernate:
+   #   ddl-auto: create
+    #ddl-auto: none
+    #naming:
+    #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        # dialect: org.hibernate.dialect.H2Dialect
+        # dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+        format_sql: true
+        id:
+          new_generator_mappings: false
+    show-sql: false
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: soisotaqbu@gmail.com
+    password: fmbatcubyabvkqeh
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+---
+server:
+  port: 8989
+  contextPath:
+---
+
+JWT_KEY: RVZOSUNUMTFDVUFCQUM=
+JWT_ISSUER: EVNICT
+JWT_TIMEOUT: 360
+JWT_COUNTER: 3
+###
+
+PASS.ACC: false
+###
+SMS_NUMBERCPU: 8
+###
+EMAIL_USERNAME: soisotaqbu@gmail.com
+EMAIL_TOKEN: fmbatcubyabvkqeh
+
+

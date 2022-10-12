@@ -1,4 +1,4 @@
-package cfm.SoisotaService.entities;
+package cfm.SMSEmailService.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
@@ -19,9 +19,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public abstract class AbstractAuditingEntity implements Serializable {
 
   private static final long serialVersionUID = 1L;
-
-  @Column(name = "active", nullable = false)
-  private Boolean active;
 
   @Column(name = "created_by", nullable = false, length = 50, updatable = false)
   private String createdBy;
