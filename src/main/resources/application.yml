@@ -21,8 +21,8 @@ spring:
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
   jpa:
-   # hibernate:
-   #   ddl-auto: create
+    # hibernate:
+    #   ddl-auto: create
     #ddl-auto: none
     #naming:
     #physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
@@ -53,6 +53,7 @@ spring:
           auth: true
           starttls:
             enable: true
+          allow8bitmime: true
 ---
 server:
   port: 9000

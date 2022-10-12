@@ -153,10 +153,10 @@ public class SMSEmailServiceImpl extends BaseService implements SMSEmailService 
 
     boolean multipart = true;
 
-    MimeMessageHelper helper = new MimeMessageHelper(message, multipart, "utf-8");
+    MimeMessageHelper helper = new MimeMessageHelper(message, multipart, "UTF-8");
 
     message.setContent(emailDataDTO.getContent(), "text/html");
-    
+
     helper.setTo(emailDataDTO.getEmail());
     helper.setSubject(emailDataDTO.getSubject());
     helper.setSubject("Test send HTML email");
