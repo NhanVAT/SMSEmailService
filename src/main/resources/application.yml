@@ -8,7 +8,8 @@ spring:
     default-domain: SMSService
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://localhost:3307/s_smsemail?useLegacyDatetimeCode=false&serverTimezone=UTC
+    #url: jdbc:mariadb://localhost:3307/s_smsemail?useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mariadb://10.1.117.181:3307/s_smsemail?useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: cmis1234
     hikari:
@@ -54,7 +55,7 @@ spring:
             enable: true
 ---
 server:
-  port: 8989
+  port: 9000
   contextPath:
 ---
 
